@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <title>Salud Global IPS | Consulta médica y especializada en el Suroeste Antioqueño</title>
+  <meta name="description" content="Salud Global IPS en Andes, Antioquia. Consulta médica, fisioterapia, terapias y atención especializada. Agenda por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Salud Global IPS | Atención médica en Andes, Antioquia">
+  <meta property="og:description" content="Una IPS habilitada para acompañarte con consulta médica, fisioterapia y servicios especializados en el Suroeste Antioqueño.">
+  <meta property="og:image" content="assets/hero-clinica.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/salud-global-logo.jpg">
+  <style>
+    :root{
+      --teal:#0f766e;
+      --teal-deep:#0b3b3c;
+      --teal-soft:#e2f4f1;
+      --blue:#1e5b8f;
+      --gold:#f3b23c;
+      --ink:#132b32;
+      --muted:#587078;
+      --paper:#f3f7f6;
+      --surface:#ffffff;
+      --line:rgba(19,43,50,.11);
+      --shadow:0 1px 2px rgba(19,43,50,.06),0 20px 50px rgba(19,43,50,.11);
+      --wrap:min(1160px,calc(100% - 48px));
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;overflow-x:hidden;scroll-behavior:smooth}
+    body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit}
+    button,input,textarea,select{font:inherit}
+    h1,h2,h3,p{margin:0;overflow-wrap:break-word}
+    h1,h2,h3{line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+    p{color:var(--muted)}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .wrap{width:var(--wrap);margin-inline:auto}
+    .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;padding:13px 18px;text-decoration:none;font-weight:800;border:1px solid transparent;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn:active{transform:scale(.97)}
+    .btn-primary{background:var(--gold);color:#132b20;box-shadow:0 1px 2px rgba(0,0,0,.08),0 14px 32px rgba(243,178,60,.24)}
+    .btn-secondary{background:#fff;color:var(--teal-deep);border-color:rgba(15,118,110,.22)}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--teal);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:28px;height:2px;background:currentColor}
+
+    .topbar{position:fixed;inset:0 0 auto;z-index:50;background:rgba(255,255,255,.88);border-bottom:1px solid rgba(19,43,50,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+    .brand img{width:48px;height:48px;border-radius:14px;object-fit:contain;background:#fff;border:1px solid var(--line);padding:4px}
+    .brand strong{display:block;font-size:1rem;line-height:1.05}
+    .brand small{display:block;margin-top:4px;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}
+    .links{display:flex;align-items:center;gap:24px}
+    .links a:not(.btn){text-decoration:none;color:#36545b;font-size:.88rem;font-weight:750}
+
+    .hero{position:relative;isolation:isolate;min-height:760px;display:flex;align-items:center;padding:142px 0 84px;background:#0d2f35;color:#fff;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(7,33,38,.94),rgba(7,33,38,.70) 44%,rgba(7,33,38,.34)),url('assets/hero-clinica.jpg') center/cover no-repeat}
+    .hero:after{content:"";position:absolute;inset:auto -12% -34% 42%;height:480px;border-radius:50%;background:rgba(35,211,189,.14);filter:blur(10px);z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:62px}
+    .hero .eyebrow{color:#8df1df}
+    .hero h1{font-size:clamp(2.75rem,6.4vw,5.8rem);max-width:760px;margin:22px 0 24px}
+    .hero h1 span{color:#8df1df}
+    .hero p{color:#d6e7e8;font-size:clamp(1rem,1.6vw,1.18rem);max-width:650px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+    .trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px;max-width:700px}
+    .trust{padding:14px 15px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14)}
+    .trust strong{display:block;font-size:.86rem}
+    .trust span{display:block;margin-top:3px;color:#b9d2d4;font-size:.74rem;font-weight:650}
+    .appointment-card{background:rgba(255,255,255,.96);color:var(--ink);border-radius:24px;padding:28px;box-shadow:var(--shadow);max-width:430px;margin-left:auto}
+    .appointment-card img{width:86px;height:86px;border-radius:24px;object-fit:contain;border:1px solid var(--line);padding:8px;background:#fff;margin-bottom:22px}
+    .appointment-card h2{font-size:1.85rem;margin-bottom:12px}
+    .appointment-list{display:grid;gap:12px;margin:24px 0}
+    .appointment-list div{display:flex;gap:11px;align-items:flex-start;color:#36545b;font-weight:700;font-size:.92rem}
+    .check{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:var(--teal-soft);color:var(--teal);font-size:.86rem;font-weight:900}
+    .card-note{padding:13px 14px;border-radius:14px;background:#f6faf9;border:1px solid var(--line);font-size:.78rem;color:var(--muted);font-weight:650}
+
+    .signals{background:#fff;border-bottom:1px solid var(--line)}
+    .signal-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .signal{padding:26px 22px;border-right:1px solid var(--line)}
+    .signal:last-child{border-right:0}
+    .signal b{display:block;font-size:1.1rem;color:var(--teal-deep)}
+    .signal span{display:block;margin-top:4px;color:var(--muted);font-size:.78rem;font-weight:750;text-transform:uppercase;letter-spacing:.08em}
+
+    section{padding:98px 0}
+    .section-head{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:end;margin-bottom:46px}
+    .section-head h2{font-size:clamp(2.15rem,5vw,4.1rem)}
+    .section-head p{font-size:1.05rem;justify-self:end;max-width:620px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;min-height:300px;box-shadow:0 1px 2px rgba(19,43,50,.04),0 12px 30px rgba(19,43,50,.06);display:flex;flex-direction:column}
+    .service-icon{width:52px;height:52px;border-radius:16px;background:var(--teal-soft);display:grid;place-items:center;color:var(--teal);font-size:1.45rem;margin-bottom:48px}
+    .service h3{font-size:1.52rem;margin-bottom:12px}
+    .service small{margin-top:auto;padding-top:26px;color:var(--teal);font-weight:900;font-size:.72rem;letter-spacing:.11em;text-transform:uppercase}
+
+    .split{background:#fff}
+    .split-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+    .photo-stack{position:relative;min-height:560px}
+    .photo-main{width:78%;height:500px;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}
+    .photo-small{position:absolute;right:0;bottom:0;width:54%;height:300px;object-fit:cover;border-radius:22px;border:8px solid #fff;box-shadow:var(--shadow)}
+    .split h2{font-size:clamp(2.2rem,4.8vw,4rem);margin:18px 0 20px}
+    .bullets{display:grid;gap:14px;margin-top:28px}
+    .bullet{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;padding:16px;border-radius:16px;background:#f7fbfa;border:1px solid var(--line)}
+    .bullet b{display:block;margin-bottom:2px}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{padding:28px 24px;border-top:3px solid var(--teal);background:rgba(255,255,255,.62);border-radius:0 0 18px 18px}
+    .step span{font-size:.76rem;color:var(--teal);font-weight:900;letter-spacing:.12em}
+    .step h3{font-size:1.35rem;margin:38px 0 10px}
+
+    .cta{padding:0 0 98px}
+    .cta-panel{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:center;padding:48px;border-radius:28px;background:linear-gradient(135deg,#0b3b3c,#0f766e);color:#fff;box-shadow:var(--shadow);overflow:hidden;position:relative}
+    .cta-panel:after{content:"";position:absolute;right:-130px;bottom:-160px;width:380px;height:380px;border-radius:50%;border:70px solid rgba(255,255,255,.08)}
+    .cta-panel h2{font-size:clamp(2rem,4.5vw,3.8rem)}
+    .cta-panel p{color:#d8eeee;font-size:1.05rem;max-width:640px}
+    .cta-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;position:relative;z-index:1}
+
+    footer{padding:42px 0;background:#0a2b30;color:#fff}
+    .foot{display:flex;justify-content:space-between;gap:24px;align-items:center}
+    .foot p{color:#9dbec2;font-size:.82rem}
+    .floating-wa{display:none;position:fixed;z-index:60;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));min-height:54px;border-radius:16px;background:#22c55e;color:#052713;text-decoration:none;align-items:center;justify-content:center;gap:10px;font-weight:900;box-shadow:0 1px 2px rgba(0,0,0,.12),0 14px 34px rgba(0,0,0,.22)}
+
+    @media(max-width:900px){
+      :root{--wrap:min(100% - 32px,720px)}
+      .links a:not(.btn){display:none}
+      .hero{min-height:auto;padding:118px 0 64px}
+      .hero-grid,.section-head,.split-grid,.cta-panel{grid-template-columns:1fr}
+      .appointment-card{margin:0;max-width:none}
+      .trust-strip,.services,.steps{grid-template-columns:1fr}
+      .signal-grid{grid-template-columns:repeat(2,1fr)}
+      .section-head p{justify-self:start}
+      .cta-actions{justify-content:flex-start}
+      .photo-stack{min-height:470px}
+      .photo-main{height:420px}
+    }
+    @media(max-width:620px){
+      .nav{height:68px}
+      .brand small{display:none}
+      .links .btn{display:none}
+      .hero h1{font-size:clamp(2.55rem,13vw,4.15rem)}
+      .hero-actions{display:grid}
+      .hero-actions .btn{width:100%}
+      .signal-grid{grid-template-columns:1fr}
+      .signal{border-right:0;border-bottom:1px solid var(--line)}
+      .signal:last-child{border-bottom:0}
+      section{padding:74px 0}
+      .section-head{margin-bottom:32px}
+      .service{min-height:auto}
+      .service-icon{margin-bottom:30px}
+      .photo-stack{min-height:400px}
+      .photo-main{width:86%;height:360px}
+      .photo-small{width:62%;height:210px}
+      .cta-panel{padding:30px 22px}
+      .foot{display:grid}
+      .floating-wa{display:flex}
+      body{padding-bottom:82px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Principal">
+      <a class="brand" href="#inicio" aria-label="Salud Global IPS">
+        <img src="assets/salud-global-logo.jpg" alt="Logo Salud Global IPS">
+        <span><strong>Salud Global IPS</strong><small>Andes, Antioquia</small></span>
+      </a>
+      <div class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#confianza">Confianza</a>
+        <a href="#agenda">Agenda</a>
+        <a class="btn btn-primary" href="https://wa.me/573015866175?text=Hola%20Salud%20Global%20IPS%2C%20quiero%20solicitar%20una%20cita." target="_blank" rel="noopener">Agendar cita</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">IPS habilitada en Antioquia</span>
+          <h1>Atención médica y especializada para el <span>Suroeste Antioqueño.</span></h1>
+          <p>Salud Global IPS acompaña tu cuidado con consulta médica, fisioterapia, terapias y servicios especializados desde Andes, Antioquia.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/573015866175?text=Hola%20Salud%20Global%20IPS%2C%20quiero%20solicitar%20una%20cita." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="trust-strip" aria-label="Datos destacados">
+            <div class="trust"><strong>Andes</strong><span>Antioquia</span></div>
+            <div class="trust"><strong>Consulta</strong><span>Médica y especializada</span></div>
+            <div class="trust"><strong>Terapias</strong><span>Fisioterapia y apoyo clínico</span></div>
+          </div>
+        </div>
+        <aside class="appointment-card" id="agenda" aria-label="Agenda de citas">
+          <img src="assets/salud-global-logo.jpg" alt="Logo Salud Global IPS">
+          <h2>Solicita tu cita por WhatsApp</h2>
+          <p>Escríbenos y confirma disponibilidad del servicio que necesitas.</p>
+          <div class="appointment-list">
+            <div><span class="check">✓</span><span>Consulta médica y orientación inicial.</span></div>
+            <div><span class="check">✓</span><span>Fisioterapia y procesos de rehabilitación.</span></div>
+            <div><span class="check">✓</span><span>Especialidades y servicios habilitados según agenda.</span></div>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/573015866175?text=Hola%20Salud%20Global%20IPS%2C%20quiero%20consultar%20disponibilidad%20de%20cita." target="_blank" rel="noopener">Consultar disponibilidad</a>
+          <div class="card-note">La disponibilidad de profesionales, horarios y servicios se confirma directamente por WhatsApp.</div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="signals" aria-label="Resumen de valor">
+      <div class="wrap signal-grid">
+        <div class="signal"><b>IPS privada</b><span>Registro REPS</span></div>
+        <div class="signal"><b>Equipo clínico</b><span>Dirección médica y terapéutica</span></div>
+        <div class="signal"><b>Andes</b><span>Cobertura regional</span></div>
+        <div class="signal"><b>WhatsApp</b><span>Atención rápida</span></div>
+      </div>
+    </div>
+
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Servicios</span>
+            <h2>Un punto de atención para cuidar mejor tu salud.</h2>
+          </div>
+          <p>Salud Global IPS reúne servicios de consulta, terapias y atención especializada para pacientes del Suroeste Antioqueño. Agenda y confirma el servicio exacto antes de desplazarte.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-icon">✚</div>
+            <h3>Consulta médica</h3>
+            <p>Valoración profesional para orientar síntomas, controles y seguimiento de salud con un equipo cercano.</p>
+            <small>Atención clínica</small>
+          </article>
+          <article class="service">
+            <div class="service-icon">◌</div>
+            <h3>Fisioterapia</h3>
+            <p>Procesos de recuperación, movilidad y acompañamiento terapéutico según necesidad del paciente.</p>
+            <small>Rehabilitación</small>
+          </article>
+          <article class="service">
+            <div class="service-icon">⌁</div>
+            <h3>Especialidades</h3>
+            <p>Servicios especializados habilitados y disponibles según agenda, profesional y ruta de atención.</p>
+            <small>Agenda confirmada</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split" id="confianza">
+      <div class="wrap split-grid">
+        <div class="photo-stack">
+          <img class="photo-main" src="assets/consulta-medica.jpg" alt="Profesional de salud revisando un caso clínico">
+          <img class="photo-small" src="assets/fisioterapia.jpg" alt="Atención terapéutica y rehabilitación">
+        </div>
+        <div>
+          <span class="eyebrow">Confianza local</span>
+          <h2>Atención seria, cercana y ubicada en Andes.</h2>
+          <p>La página pública del registro de prestadores ubica a Salud Globall Suroeste S.A.S. como IPS habilitada en Andes, Antioquia. Esta demo organiza esa información para que los pacientes puedan entender qué ofrece y contactarse sin vueltas.</p>
+          <div class="bullets">
+            <div class="bullet"><span class="check">✓</span><div><b>Información clara</b><p>Servicios explicados en lenguaje sencillo, sin prometer tarifas ni horarios no confirmados.</p></div></div>
+            <div class="bullet"><span class="check">✓</span><div><b>Contacto directo</b><p>El botón principal abre WhatsApp con el número del negocio para solicitar cita o información.</p></div></div>
+            <div class="bullet"><span class="check">✓</span><div><b>Presencia profesional</b><p>Una web pensada para generar confianza antes de la primera conversación con el paciente.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Cómo funciona</span>
+            <h2>Agenda en tres pasos simples.</h2>
+          </div>
+          <p>La página está diseñada para que una persona interesada pase de buscar información a conversar con la IPS en segundos.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span>01</span><h3>Elige el servicio</h3><p>Consulta médica, fisioterapia, terapias o una especialidad.</p></article>
+          <article class="step"><span>02</span><h3>Escribe por WhatsApp</h3><p>Pregunta por disponibilidad, horario, requisitos y ubicación exacta.</p></article>
+          <article class="step"><span>03</span><h3>Confirma tu cita</h3><p>Recibe la orientación del equipo y coordina tu atención.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-panel">
+        <div>
+          <h2>Tu salud empieza con una conversación clara.</h2>
+          <p>Escribe a Salud Global IPS y solicita información sobre citas, servicios disponibles y orientación para tu caso.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/573015866175?text=Hola%20Salud%20Global%20IPS%2C%20quiero%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener">Hablar por WhatsApp</a>
+          <a class="btn btn-secondary" href="https://instagram.com/saludglobal_ips" target="_blank" rel="noopener">Ver Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="brand">
+        <img src="assets/salud-global-logo.jpg" alt="">
+        <span><strong>Salud Global IPS</strong><small>Consulta y atención especializada</small></span>
+      </div>
+      <p>Andes, Antioquia · WhatsApp +57 301 586 6175 · Información sujeta a confirmación directa con la IPS.</p>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/573015866175?text=Hola%20Salud%20Global%20IPS%2C%20quiero%20solicitar%20una%20cita." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+</body>
+</html>
